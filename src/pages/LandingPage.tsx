@@ -177,9 +177,10 @@ export const LandingPage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl sm:text-6xl lg:text-hero-lg font-extrabold tracking-tight text-[#0B1736] dark:text-white max-w-5xl leading-[1.08] font-sans"
+          className="text-4xl sm:text-6xl lg:text-hero-lg font-extrabold tracking-tight max-w-5xl leading-[1.08] font-sans"
         >
-          Predictive Optimization for{' '}
+          <span className="text-black dark:text-black">Predictive Optimization</span>{' '}
+          <span className="text-slate-900 dark:text-slate-800">for</span>{' '}
           <span className="bg-gradient-to-r from-stripe-indigo via-stripe-cyan to-stripe-teal bg-clip-text text-transparent">
             Scarce Resource Allocation
           </span>
