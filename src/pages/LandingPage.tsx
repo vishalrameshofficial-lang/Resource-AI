@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import { AuthModal } from '../components/common/AuthModal';
+import { Hero3DScene } from '../components/landing/Hero3DScene';
 
 export const LandingPage: React.FC = () => {
   const { loginAs, setDomain, setActiveTab } = useApp();
@@ -28,14 +29,14 @@ export const LandingPage: React.FC = () => {
   const smoothX = useSpring(mouseX, springConfig);
   const smoothY = useSpring(mouseY, springConfig);
 
-  const layer1X = useTransform(smoothX, [-500, 500], [-30, 30]);
-  const layer1Y = useTransform(smoothY, [-500, 500], [-20, 20]);
+  const layer1X = useTransform(smoothX, [-500, 500], [-25, 25]);
+  const layer1Y = useTransform(smoothY, [-500, 500], [-15, 15]);
   
-  const layer2X = useTransform(smoothX, [-500, 500], [45, -45]);
-  const layer2Y = useTransform(smoothY, [-500, 500], [30, -30]);
+  const layer2X = useTransform(smoothX, [-500, 500], [35, -35]);
+  const layer2Y = useTransform(smoothY, [-500, 500], [25, -25]);
 
   const layer3X = useTransform(smoothX, [-500, 500], [-15, 15]);
-  const layer3Y = useTransform(smoothY, [-500, 500], [25, -25]);
+  const layer3Y = useTransform(smoothY, [-500, 500], [20, -20]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const { clientX, clientY } = e;
@@ -47,49 +48,67 @@ export const LandingPage: React.FC = () => {
   return (
     <div 
       onMouseMove={handleMouseMove}
-      className="min-h-screen bg-[#F8FAFC] dark:bg-[#0B1736] text-slate-900 dark:text-slate-100 flex flex-col selection:bg-stripe-indigo selection:text-white overflow-x-hidden relative transition-colors duration-300"
+      className="min-h-screen bg-[#FAFCFF] dark:bg-[#071124] text-slate-900 dark:text-slate-100 flex flex-col selection:bg-cyan-500 selection:text-white overflow-x-hidden relative transition-colors duration-300"
     >
       {/* ------------------------------------------------------------- */}
-      {/* BACKGROUND ABSTRACT ANIMATED FLOWING AURORA GRADIENT RIBBONS  */}
+      {/* BRIGHT FUTURISTIC SAAS HERO BACKGROUND WITH 3D ROTATING RIBBON*/}
       {/* ------------------------------------------------------------- */}
-      <div className="absolute top-0 left-0 right-0 h-[850px] overflow-hidden pointer-events-none z-0">
-        {/* Ribbon 1: Deep Blue + Indigo */}
+      <div className="absolute top-0 left-0 right-0 h-[880px] overflow-hidden pointer-events-none z-0">
+        
+        {/* Soft Flowing 3D Wave Ambient Glow 1: Cyan & Light Blue */}
         <motion.div
           style={{ x: layer1X, y: layer1Y }}
           animate={{
-            rotate: [0, 8, -6, 0],
-            scale: [1, 1.08, 0.95, 1],
-            borderRadius: ['40% 60% 70% 30% / 40% 50% 60% 50%', '60% 40% 30% 70% / 50% 60% 40% 60%', '40% 60% 70% 30% / 40% 50% 60% 50%']
+            rotate: [0, 6, -4, 0],
+            scale: [1, 1.05, 0.98, 1]
           }}
-          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute -top-32 -right-24 w-[700px] h-[550px] bg-gradient-to-br from-[#173B8F]/35 via-[#4F46E5]/25 to-transparent blur-[90px] rounded-full"
+          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-32 right-1/4 w-[750px] h-[550px] bg-gradient-to-br from-[#06b6d4]/18 via-[#38bdf8]/14 to-transparent blur-[110px] rounded-full pointer-events-none"
         />
 
-        {/* Ribbon 2: Cyan + Teal Flowing Wave */}
+        {/* Soft Flowing 3D Wave Ambient Glow 2: Purple & Subtle Pink */}
         <motion.div
           style={{ x: layer2X, y: layer2Y }}
           animate={{
-            rotate: [-10, 5, -12, -10],
-            scale: [0.95, 1.12, 1, 0.95],
-            borderRadius: ['50% 50% 30% 70% / 60% 40% 60% 40%', '30% 70% 60% 40% / 40% 60% 50% 50%', '50% 50% 30% 70% / 60% 40% 60% 40%']
+            rotate: [-6, 4, -8, -6],
+            scale: [0.96, 1.06, 0.96]
           }}
-          transition={{ duration: 22, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-20 left-1/2 -translate-x-1/2 w-[850px] h-[500px] bg-gradient-to-r from-[#22D3EE]/25 via-[#14B8A6]/20 to-[#84CC16]/15 blur-[110px] rounded-full"
+          transition={{ duration: 24, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute top-28 -left-20 w-[720px] h-[520px] bg-gradient-to-tr from-[#a855f7]/16 via-[#f472b6]/12 to-transparent blur-[120px] rounded-full pointer-events-none"
         />
 
-        {/* Ribbon 3: Soft Green + Indigo Ambient Aurora */}
+        {/* Soft Flowing 3D Wave Ambient Glow 3: Bright Teal & White Refraction */}
         <motion.div
           style={{ x: layer3X, y: layer3Y }}
           animate={{
-            rotate: [5, -10, 8, 5],
-            scale: [1.05, 0.9, 1.05],
+            rotate: [4, -6, 5, 4],
+            scale: [1.02, 0.95, 1.02]
           }}
-          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-48 -left-40 w-[600px] h-[450px] bg-gradient-to-tr from-[#84CC16]/20 via-[#173B8F]/30 to-[#4F46E5]/15 blur-[100px] rounded-full"
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute top-72 left-1/3 w-[650px] h-[480px] bg-gradient-to-r from-[#14b8a6]/14 via-[#38bdf8]/10 to-transparent blur-[110px] rounded-full pointer-events-none"
         />
 
-        {/* Subtle Stripe-like Mesh Grid Layer */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#0b17360a_1px,transparent_1px),linear-gradient(to_bottom,#0b17360a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+        {/* High-Precision Modern SaaS Micro-Dot Grid */}
+        <div 
+          className="absolute inset-0 opacity-40 pointer-events-none"
+          style={{
+            backgroundImage: 'radial-gradient(#0284c7 0.75px, transparent 0.75px)',
+            backgroundSize: '36px 36px',
+            maskImage: 'radial-gradient(ellipse 70% 60% at 50% 35%, black 40%, transparent 85%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 70% 60% at 50% 35%, black 40%, transparent 85%)'
+          }}
+        />
+
+        {/* Large Glossy 3D Abstract Object / Ribbon Structure (Continuous 360° Rotation) */}
+        <Hero3DScene />
+
+        {/* Soft Radial Luminosity Shield to Ensure 100% Crisp Text Readability */}
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle at 50% 42%, rgba(250,252,255,0.72) 0%, rgba(250,252,255,0.3) 55%, transparent 85%)'
+          }}
+        />
       </div>
 
       {/* ------------------------------------------------------------- */}
