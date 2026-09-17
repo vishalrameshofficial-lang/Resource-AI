@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useApp } from '../../context/AppContext';
+import { Dashboard3DBackground } from './Dashboard3DBackground';
 
 export const AnimatedBackground: React.FC = () => {
   const { activeTab, domain } = useApp();
@@ -48,6 +49,9 @@ export const AnimatedBackground: React.FC = () => {
       className="fixed inset-0 pointer-events-none z-0 overflow-hidden select-none bg-gradient-to-br from-[#FAFCFF] via-[#F4F7FA] to-[#EDF2F7]"
       style={{ pointerEvents: 'none' }}
     >
+      {/* Continuous Animated 3D Futuristic AI Command Center Background */}
+      <Dashboard3DBackground />
+
       {/* Soft Ambient Top Right Aurora Blob - Subtle ambient light movement */}
       <motion.div
         animate={{
