@@ -180,7 +180,7 @@ export const LandingPage: React.FC = () => {
           className="text-4xl sm:text-6xl lg:text-hero-lg font-extrabold tracking-tight max-w-5xl leading-[1.08] font-sans"
         >
           <span className="text-black dark:text-black">Predictive Optimization</span>{' '}
-          <span className="text-slate-900 dark:text-slate-800">for</span>{' '}
+          <span className="text-black dark:text-black">for</span>{' '}
           <span className="bg-gradient-to-r from-stripe-indigo via-stripe-cyan to-stripe-teal bg-clip-text text-transparent">
             Scarce Resource Allocation
           </span>
@@ -191,7 +191,7 @@ export const LandingPage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-6 text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed font-normal"
+          className="mt-6 text-base sm:text-lg lg:text-xl text-black dark:text-black max-w-3xl leading-relaxed font-semibold"
         >
           Empowering hospital admins, NDRF disaster coordinators, and education officials across India to route ICU beds, oxygen, food kits, and teachers where urgency is highest.
         </motion.p>
@@ -216,7 +216,7 @@ export const LandingPage: React.FC = () => {
               loginAs('Global Operations Chief');
               setActiveTab('map');
             }}
-            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-sm font-bold shadow-subtle hover:bg-slate-50 dark:hover:bg-slate-800/80 transition-all duration-200 flex items-center justify-center space-x-2"
+            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-black dark:text-black text-sm font-bold shadow-subtle hover:bg-slate-50 dark:hover:bg-slate-800/80 transition-all duration-200 flex items-center justify-center space-x-2"
           >
             <MapPin className="w-4 h-4 text-stripe-indigo" />
             <span>Explore GIS Urgency Map</span>
@@ -232,7 +232,7 @@ export const LandingPage: React.FC = () => {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mt-16 w-full max-w-4xl"
         >
-          <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-6">
+          <p className="text-xs font-bold uppercase tracking-wider text-black dark:text-black mb-6">
             Select an Executive Persona to Experience Live Dashboard:
           </p>
 
