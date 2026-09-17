@@ -216,10 +216,10 @@ export const LandingPage: React.FC = () => {
               loginAs('Global Operations Chief');
               setActiveTab('map');
             }}
-            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-black dark:text-black text-sm font-bold shadow-subtle hover:bg-slate-50 dark:hover:bg-slate-800/80 transition-all duration-200 flex items-center justify-center space-x-2"
+            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-white text-sm font-bold shadow-subtle hover:bg-slate-50 dark:hover:bg-slate-800/80 transition-all duration-200 flex items-center justify-center space-x-2"
           >
             <MapPin className="w-4 h-4 text-stripe-indigo" />
-            <span>Explore GIS Urgency Map</span>
+            <span className="text-slate-800 dark:text-white">Explore GIS Urgency Map</span>
           </button>
         </motion.div>
 
